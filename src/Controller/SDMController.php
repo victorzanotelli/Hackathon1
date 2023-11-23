@@ -8,14 +8,14 @@ use App\Model\UserManager;
 
 class SDMController extends AbstractController
 {
-    public function contentCreator(): void
+    public function contentCreator()
     {
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $trimPost = array_map('trim', $_POST);
             $posts = array_map('htmlentities', $trimPost);
             $sDMManager = new SDMManager();
             $sDMManager->insert($posts);
+            header('Location: /');
         }
     }
     public function contentIndex(): string
