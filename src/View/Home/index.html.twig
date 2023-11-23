@@ -1,56 +1,33 @@
 {% extends 'layout.html.twig' %}
+
 {% block content %}
-    <div class="container sign-up-page">
-        {% for error in errors %}
-            <article>
-                <header>
-                    Vérifier les informations saisies
-                </header>
-                <ul>
-                    <li>{{ error }}</li>
-                </ul>
-            </article>
-        {% endfor %}
-        <h2>Balance ton Santa !</h2>
-        <div id="form-container">
-            <form action="" method="post" id="form1">
-                <h4>SDM</h4>
-                <fieldset>
-                    <label for="pseudo">Votre pseudo :
-                    </label>
-                    <input type="text" id="pseudo" name="pseudo" required placeholder="Julien">
-                </fieldset>
-                <label for="title">Choose a title :
-                </label>
-                <input type="text" id="title" name="title" required placeholder="your title here !!">
-                <fieldset>
-                    <label for="story">Your SDM :
-                    </label>
-                    <input type="text" id="story" name="story" required>
-                </fieldset>
-                <fieldset>
-                    <label for="photo">Add a picture from url :
-                    </label>
-                    <input type="text" id="photo" name="photo" required>
-                    <input type="hidden" id="love" name="love" value= 0>
-                    <input type="hidden" id="no_love" name="no_love" value= 0>
-                </fieldset>
-                <div class="buttons-line">
-                    <button type="submit">Publish</button>
+	<h1 class="toto">Balance ton Santa</h1>
+	    <div class="formulaire">
+
+            <form action="" method="POST" class="ajouter">
+            <h2>Ajouter votre SDM</h2></br>
+
+                <div>
+                    <label for="pseudo" >Pseudo :</label>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" required="required">
                 </div>
+                <div>
+                    <label for="titre">Titre :</label>
+                    <input type="text" name="titre" id="titre" placeholder="Titre" required="required">
+                </div>
+                <div>
+                    <label for="msg">Message :</label>
+                    <textarea name="msg" id="msg" cols="30" rows="10" maxlength="500" required="required"></textarea>*
+                </div>
+                <div>
+                    <label for="img">Choisir un fichier:</label>
+                    <input type="file" id="img" name="img" accept="image/png, image/jpeg, "/>
+                </div>
+                <div>
+                    <input type="submit" value="Envoyer">
+                </div>
+                <input type="hidden" id="love" name="love" value= 0>
+                <input type="hidden" id="no_love" name="no_love" value= 0>
             </form>
         </div>
-    </div>
-{% block title %}Ton Santa ta SDM{% endblock %}
-    {% for post in posts %}
-        <article>
-            <header>{{ post.title }}</header>
-            <img src="{{ post.photo }}" alt="Photo de {{ post.pseudo }}">
-            <footer>{{ post.description }}{{ post.pseudo }}</footer>
-        </article>
-        <form class='like' action="" method="post">
-            <input type="hidden" name="targetId" value={{user.id}}>
-            <input type="submit" value="❤️">
-        </form>
-    {% endfor %}
 {% endblock %}

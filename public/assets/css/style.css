@@ -8,13 +8,14 @@
     --font-family-autre: "Quicksand";
 }
 
-/** G O O G L E  F O N T **/
+
+/*********** G O O G L E  F O N T *************/
 /* Rokkit */
 @import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@900&display=swap');
-/*Quicksand */
+/* Quicksand */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,31 +24,79 @@
     border-style: none;
 }
 
-/** N A V B A R **/
+
+/*********** N A V B A R *************/
 body {
+    color: #f76c6c;
     background-color: #333333;
 }
-nav { background-color: #800000;
-    height: 90px; line-height: 90px;
+
+nav {
+    background-color: #800000;
+    height: 90px;
+    line-height: 90px;
 }
-nav ul { padding: 0;
+
+nav ul {
+    padding: 0;
     width: 40%;
     margin: auto;
 }
-nav ul li { display: inline-block;
+
+nav ul li {
+    display: inline-block;
     justify-content: center;
     text-align: center;
-    vertical-align:top;
+    vertical-align: top;
 }
+
 img.bts {
-    border:none;
+    border: none;
     width: 200px;
 }
+
 img.logo {
-    border:none;
+    border: none;
     width: 200px;
+
 }
+
 img.sdm {
-    border:none;
+    border: none;
     width: 150px;
+}
+
+
+
+
+.toto{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin-top: 6rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+form {
+    text-align: center;
+}
+
+
+.formulaire{
+    margin-top: 4rem;
+    width: 50%;
+    margin-left: 25rem;
+}
+
+.ajouter{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-div);
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    
 }
