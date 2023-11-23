@@ -1,3 +1,53 @@
-body {
-    color: #f76c6c;
+/** C S S  V A R I A B L E S **/
+:root{
+    --font-color: #FDFDFF;
+    --background: #333333;
+    --background-nav:#800000;
+    --background-div: #4D4C50;
+    --font-family-h2: "Rokkitt";
+    --font-family-autre: "Quicksand";
 }
+
+/** G O O G L E  F O N T **/
+/* Rokkit */
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@900&display=swap');
+/* Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border-style: none;
+}
+
+/** N A V B A R **/
+body {
+background-color: #333333;
+}
+    nav { background-color: #800000;
+    height: 90px; line-height: 90px;
+    }
+nav ul { padding: 0;
+    width: 40%;
+    margin: auto;
+    }
+nav ul li { display: inline-block;
+    justify-content: center;
+    text-align: center;
+    vertical-align:top;
+    }
+    img.bts {
+    border:none;
+    width: 200px;
+    } 
+    img.logo {
+    border:none;
+    width: 200px;
+    }
+    img.sdm {
+    border:none;
+    width: 150px;
+    }
